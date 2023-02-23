@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Home />
-      <Search />
+      <Home />
+      {/* <Search />
       <Support />
       <Info />
       <Lounge />

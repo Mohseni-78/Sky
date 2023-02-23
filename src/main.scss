@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=League+Spartan:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
+  font-family: "League+Spartan", sans-serif;
 }
 :root {
   --PrimaryColor: hsl(225, 50%, 48%);
@@ -45,9 +45,7 @@ li{
     font-size: 1.3rem;
     cursor: pointer;
 }
-.none{
-    display: none;
-}
+
 .flex{
     display: flex;
     align-items: center;
@@ -55,6 +53,9 @@ li{
 .grid{
     display: grid;
     align-items: center;
+}
+.none{
+    display: none;
 }
 .btn{
     padding: 0.7rem 1.5rem;
@@ -96,6 +97,104 @@ h2{
     font-size: 25px;
     padding: 1rem 0;
     color: var(--BlackColor);
-    
+}
+
+// Navbar Section Styling==============>
+.navBar{
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+    .navBarOne ,.navBarTwo{
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .navBarOne{
+        background: var(--SecondaryColor);
+
+        .icon{
+            &:hover{
+                color: var(--PrimaryColor);
+            }
+        }
+        .atb{
+            gap: 1rem;
+            span{
+                color: var(--BlackColor);
+                font-size: 13px;
+                cursor: pointer;
+                &:hover{
+                    color: var(--PrimaryColor);
+                    font-family: 700;
+                }
+            }
+        }
+    }
+    .navBarTwo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 3rem;
+        padding: 1.5rem 1rem;
+        position: fixed;
+        transition: .3s ease-in-out;
+
+        .logoDiv{
+            .logo{
+                width: 20%;
+            }
+        }
+        @media screen and (max-width:768px) {
+            
+            .navBarMenu{
+                position: absolute;
+                background: var(--SecondaryColor);
+                padding: 1.5rem;
+                border-radius: 10px;
+                top: 5rem;
+                right: -50%;
+                width: 80%;
+                transform: translateX(50%);
+                z-index: 2000;
+                box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px ,rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+            border    :3px solid var(--WhiteColor);
+            transition: .4s ease-in-out;
+            .menu{
+                flex-direction: column;
+                gap: .5rem;
+                text-align: center;
+                .listItem{
+                    padding: .5rem 0;
+                    cursor: pointer;
+                    color: var(--BlackColor);
+                    &:hover{
+                        color: var(--PrimaryColor);
+                        font-weight: 700;
+                    }
+                }
+            }
+            .btnOne{
+                display: block;
+                justify-content: center;
+                margin: auto;
+                margin-top: 1rem;
+            }
+            }
+            .navBarMenuShow{
+                right: 50%;
+                transition: .4s ease-in-out;
+            }
+            .btnTwo{
+                display: none;
+            }
+            .toggleIcon{
+                .icon{
+                    color: var(--BlackColor);
+                    font-size: 30px;
+                }
+            }
+        }
+    }
 }
 

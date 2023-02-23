@@ -1,5 +1,5 @@
 //Imported Assests ===========>
-import takeoff from '../../assets/takeOff.jpg'
+import takeoff from '../../assets/takeOff.png'
 import sky from '../../assets/sky.mp4'
 const Home = () => {
   return (

@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 // Imported Icons ============>
 import { SiConsul } from "react-icons/si";
+import { SiSkyliner } from "react-icons/si";
 import { BsPhoneVibrate } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
+import { MdFlightTakeoff } from "react-icons/md";
 // Imported Images ============>
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 const Navbar = () => {
   const [showNavBarMenu, setShowNavBarMenu] = useState<boolean>(false);
   const showAndHideMenu = () => {
     setShowNavBarMenu((prev) => !prev);
   };
-  console.log(showNavBarMenu);
+  
 
   return (
     <div className="navBar flex">
@@ -34,7 +36,9 @@ const Navbar = () => {
       </div>
       <div className="navBarTwo flex">
         <div className="logoDiv">
-          <img src={logo} alt="" className="Logo" />
+          {/* <MdFlightTakeoff className="logo"/> */}
+          <SiSkyliner  className="logo"/>
+          {/* <img src={logo} alt="" className="Logo" /> */}
         </div>
 
         <div className={`navBarMenu ${showNavBarMenu && "navBarMenuShow"}`}>

@@ -1,4 +1,4 @@
-import Lounge from "./Components/Any/Lounge";
+import Lounge from "./Components/Lounge/Lounge";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Info from "./Components/Info/Info";
@@ -14,12 +14,12 @@ function App() {
       <Navbar />
       <Home />
       <Search />
-      {/* <Support />
+      <Support />
       <Info />
       <Lounge />
       <Traveles />
       <Subscribers />
-      <Footer /> */}
+       <Footer />
     </>
   );
 }

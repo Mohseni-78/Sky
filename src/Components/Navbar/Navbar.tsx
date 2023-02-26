@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // Imported Icons ============>
 import { SiConsul } from "react-icons/si";
 import { SiSkyliner } from "react-icons/si";
@@ -7,13 +7,18 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
 import { MdFlightTakeoff } from "react-icons/md";
 // Imported Images ============>
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+
 const Navbar = () => {
   const [showNavBarMenu, setShowNavBarMenu] = useState<boolean>(false);
+  const [bgNavbarTwo, setBgNavbarTwo] = useState<boolean>(false);
   const showAndHideMenu = () => {
     setShowNavBarMenu((prev) => !prev);
   };
-  
+
+  window.addEventListener("scroll", () => {
+    window.scrollY >= 10 ? setBgNavbarTwo(true) : setBgNavbarTwo(false);
+  });
 
   return (
     <div className="navBar flex">
@@ -34,10 +39,10 @@ const Navbar = () => {
           <span>Sign Out</span>
         </div>
       </div>
-      <div className="navBarTwo flex">
+      <div className={`navBarTwo flex ${bgNavbarTwo && "navbar_with_bg"}`}>
         <div className="logoDiv">
           {/* <MdFlightTakeoff className="logo"/> */}
-          <SiSkyliner  className="logo"/>
+          <SiSkyliner className="logo" />
           {/* <img src={logo} alt="" className="Logo" /> */}
         </div>
 
@@ -61,7 +66,7 @@ const Navbar = () => {
           </ul>
           <button className="btn flex btnOne">Contact</button>
         </div>
-        
+
         <button onClick={showAndHideMenu} className="btn flex btnTwo">
           Contact
         </button>

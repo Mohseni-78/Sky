@@ -156,3 +156,84 @@
         }
     }
 }
+// Search Section Styling =================>
+.search {
+    .sectionContainer {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 1;
+        row-gap: 2rem;
+
+        .btns {
+            background: var(--SecondaryColor);
+            padding: .5rem;
+            border-radius: 1rem;
+            flex-direction: column;
+            margin: auto;
+            width: 100%;
+
+            .singleBtn {
+                padding: .8rem 1.5rem;
+                font-size: 13px;
+                border-radius: 3rem;
+                width: 80%;
+                text-align: center;
+
+                &:hover {
+                    background: var(--PrimaryColor);
+                    color: var(--WhiteColor);
+                    font-weight: 500;
+                    transition: .4s ease;
+                }
+            }
+
+            .active {
+                background: var(--PrimaryColor);
+                color: var(--WhiteColor);
+                font-weight: 500;
+            }
+        }
+
+        .searchInputs {
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .singleInput {
+                .iconDiv {
+                    padding: 16px 10px;
+                    border-radius: 3rem;
+                    background: var(--SecondaryColor);
+                    margin-right: 1rem;
+
+                    .icon {
+                        color: var(--BlackColor);
+                        opacity: .7;
+                    }
+                }
+
+                .texts {
+                    h4 {
+                        padding-top: 0;
+                        padding-bottom: .7rem;
+                        color: var(--BlackColor);
+                        font-weight: 700;
+                    }
+
+                    input {
+                        width: 95%;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+
+                        &::placeholder {
+                            font-size: 12px;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

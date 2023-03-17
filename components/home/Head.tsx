@@ -18,7 +18,7 @@ const Head = () => {
       </div>
       <div data-aos="fade-down" data-aos-duration='2500' className="homeImages flex">
         <div className="videoDiv">
-          {/* <video src={sky} className="video" autoPlay loop ></video> */}
+          <Image src={takeoff} className="video" alt=''/>
         </div>
         <Image src={takeoff} alt="" className="plain" />
       </div>

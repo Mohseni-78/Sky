@@ -1,8 +1,8 @@
-import styles from '@/styles/Home.module.scss'
+import Navbar from '@/components/navbar/Nabar'
 export default function Home() {
   return (
     <>
-      App
+      <Navbar/>
     </>
   )
 }

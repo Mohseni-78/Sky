@@ -118,3 +118,41 @@
         box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     }
 }
+// Home Section Styling =================>
+.home {
+    padding-top: 10rem;
+    text-align: center;
+    gap: 2rem;
+    flex-direction: column;
+
+    .mainText {
+        color: var(--BlackColor);
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 2.5rem;
+    }
+
+    .homeImages {
+        width: 100%;
+        margin: 1rem auto 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 5rem;
+
+        .videoDiv {
+            width: 100%;
+
+            .video {
+                border-radius: 10rem;
+            }
+        }
+
+        .plain {
+            position: absolute;
+            width: 100%;
+            top: -30%;
+            border-radius: 1rem;
+        }
+    }
+}

@@ -118,6 +118,7 @@
         box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     }
 }
+
 // Home Section Styling =================>
 .home {
     padding-top: 10rem;
@@ -156,6 +157,7 @@
         }
     }
 }
+
 // Search Section Styling =================>
 .search {
     .sectionContainer {
@@ -237,6 +239,7 @@
         }
     }
 }
+
 // Support Section Styling =================>
 .support {
     .sectionContainer {
@@ -296,6 +299,7 @@
         }
     }
 }
+
 // Info Section Styling =================>
 .info {
     background-color: var(--SecondaryColor);
@@ -353,6 +357,7 @@
         }
     }
 }
+
 // Lounge Section Styling =================>
 .lounge {
     .sectionContainer {
@@ -385,6 +390,7 @@
         }
     }
 }
+
 // Traveles Section Styling =================>
 .traveles {
     .sectionContainer {
@@ -499,5 +505,116 @@
                 }
             }
         }
+    }
+}
+
+// Subscribe Section Styling =================>
+.subscribe {
+    background-color: var(--SecondaryColor);
+
+    .sectionContainer {
+        text-align: center;
+
+        .inputDiv {
+            margin-top: 1rem;
+            flex-direction: column;
+            background: var(--WhiteColor);
+            border-radius: 1rem;
+
+            input {
+                border: none;
+                outline: none;
+                background: transparent;
+                padding: 1rem .5rem;
+                width: 100%;
+
+                &::placeholder {
+                    font-size: 13px;
+                    opacity: .5;
+                }
+            }
+
+            .btn {
+                width: 100%
+            }
+        }
+    }
+}
+
+// Footer Section Styling =================>
+.footer {
+    background-color: var(--SecondaryColor);
+
+    .sectionContainer {
+        gap: 2.5rem;
+
+        .gridOne {
+            gap: 1rem;
+            justify-content: center;
+            margin: auto;
+
+            .logoDiv {
+                .logo {
+                    width: 20%;
+
+                }
+            }
+
+            .socialIcons {
+                margin-top: 1rem;
+                gap: 1rem;
+
+                .icon {
+                    height: 50px;
+                    width: 30px;
+                    border-radius: 10rem;
+                    border: 1px solid var(--BorderColor);
+                    box-shadow: var(--BoxShadow);
+                    padding: .4rem;
+                    color: var(--GreyText);
+
+                    &:hover {
+                        background: var(--PrimaryColor);
+                        transform: translateY(-7px);
+                        transition: var(--Transition);
+                        border: 1px solid var(--PrimaryColor);
+                        color: var(--WhiteColor);
+
+                    }
+                }
+            }
+        }
+    }
+
+    .footerLinks {
+        display: grid;
+
+        .linkTitle {
+            color: var(--BlackColor);
+            font-weight: 500;
+            display: block;
+            padding-bottom: 1rem;
+        }
+
+        li a {
+            display: block;
+            color: var(--GreyText);
+            transition: var(--Transition);
+            padding: .3rem 0;
+
+            &:hover {
+                transform: translateX(7px);
+                color: var(--PrimaryColor);
+            }
+        }
+    }
+
+    .copyRightDiv {
+        justify-content: center;
+        margin-top: 1.5rem;
+        padding: 1rem;
+        gap: 1rem;
+        border-top: 1px solid var(--GreyText);
+        text-align: center;
     }
 }

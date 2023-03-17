@@ -12,7 +12,7 @@ const Lounge = () => {
   }, [])
   return (
     <div className="lounge section container">
-      <div  className="sectionContainer flex">
+      <div  className="sectionContainer grid">
         <div data-aos="fade-left" data-aos-duration='2500' className="imgDiv">
           <Image src={lounge_img} alt="" />
         </div>

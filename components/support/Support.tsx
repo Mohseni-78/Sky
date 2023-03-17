@@ -23,7 +23,7 @@ const Support = () => {
           </p>
         </div>
 
-        <div className="infoDiv grid">
+        <div className="infoDiv flex">
           <div className="textDiv">
             <div data-aos="fade-down" data-aos-duration='1500' className="singleInfo">
               <span className="number">01</span>

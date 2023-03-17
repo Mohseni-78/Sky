@@ -3,6 +3,7 @@ import Head from "@/components/home/Head"
 import Search from '@/components/search/Search'
 import Support from '@/components/support/Support'
 import Info from '@/components/info/Info'
+import Lounge from '@/components/lounge/Lounge'
 export default function Home() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Home() {
       <Search/>
       <Support/>
       <Info/>
+      <Lounge/>
     </>
   )
 }

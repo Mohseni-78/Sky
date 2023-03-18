@@ -47,6 +47,7 @@
         transition: .3s ease-in-out;
         margin-top: 1rem;
 
+
         .logoDiv {
             .logo {
                 width: 100%;
@@ -78,6 +79,7 @@
                         padding: .5rem 0;
                         cursor: pointer;
                         color: var(--BlackColor);
+
 
                         &:hover {
                             color: var(--PrimaryColor);
@@ -623,6 +625,7 @@
 // Signup Section Styling =================>
 .signup {
     overflow: hidden;
+
     .bg {
         background-size: cover;
         background-clip: border-box;
@@ -647,11 +650,12 @@
     }
 
     .form {
-.p{
-    color: white;
-    margin-left: 10px;
-    font-size: small;
-}
+        .p {
+            color: white;
+            margin-left: 10px;
+            font-size: small;
+        }
+
         .form-group {
             margin-top: 1.8rem;
             margin-left: 10px;
@@ -684,12 +688,13 @@
                     font-size: 12px;
                 }
             }
-            span{
+
+            span {
                 margin-left: 7px;
                 font-size: smaller;
                 color: rgb(128, 13, 13);
             }
-            
+
             .icon {
                 position: absolute;
                 right: 5px;
@@ -950,6 +955,13 @@
                     cursor: pointer;
                     color: var(--TextColor);
                     font-weight: 700;
+
+                    &:hover {
+                        color: var(--PrimaryColor);
+                        font-weight: 700;
+                        transition: .3s all ease-in;
+                        transform: scale(1.1);
+                    }
                 }
             }
 
@@ -1193,6 +1205,13 @@
                 .listItem {
                     padding: 0 1.5rem;
                     font-size: 14px;
+
+                    &:hover {
+                        color: var(--PrimaryColor);
+                        font-weight: 700;
+                        transition: .3s all ease-in;
+                        transform: scale(1.1);
+                    }
                 }
             }
         }

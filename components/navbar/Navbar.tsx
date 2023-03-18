@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { signOut } from 'next-auth/react'
 // Imported Icons ============>
 import { SiConsul } from "react-icons/si";
 import { SiLinear } from "react-icons/si";
@@ -10,7 +11,7 @@ import { MdFlightTakeoff } from "react-icons/md";
 // Imported Images ============>
 // import logo from "../../assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({ user }: any) => {
   const [showNavBarMenu, setShowNavBarMenu] = useState<boolean>(false);
   const [bgNavbarTwo, setBgNavbarTwo] = useState<boolean>(false);
 
@@ -38,8 +39,18 @@ const Navbar = () => {
         </li>
       </div>
       <div className="atb flex">
-        <Link href="/signin"><span>Sign In</span></Link>
-        <span>Sign Out</span>
+        {
+          user ? <>
+            <span className="btn" style={{ color: "white" }}>{user}</span>
+            <span className="btn" style={{ color: "white", background: "red" }} onClick={(e) => {
+              e.preventDefault();
+              signOut();
+            }}>Sign Out</span>
+          </> :
+            <Link href="/signin"><span className="btn" style={{color: "white", background: "green"}}>Sign In</span></Link>
+
+        }
+
       </div>
     </div>
     <div className={`navBarTwo flex ${bgNavbarTwo && "navbar_with_bg"}`}>
@@ -86,3 +97,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

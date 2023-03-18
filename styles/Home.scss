@@ -45,6 +45,7 @@
         padding: 1.5rem 1rem;
         position: fixed;
         transition: .3s ease-in-out;
+        margin-top: 1rem;
 
         .logoDiv {
             .logo {
@@ -151,7 +152,7 @@
 
         .plain {
             position: absolute;
-            width: 100%;
+            width: 80%;
             top: -30%;
             border-radius: 1rem;
         }
@@ -1031,7 +1032,7 @@
         }
 
         .navbar_with_bg {
-            padding: 0 5rem;
+            padding: 8px 5rem;
         }
     }
 
@@ -1149,4 +1150,19 @@
             }
         }
     }
+}
+
+::selection {
+    background: var(--PrimaryColor);
+    color: var(--WhiteColor);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--GreyBg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--PrimaryColor);
+    border-radius: 10px;
 }

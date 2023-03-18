@@ -1,17 +1,13 @@
 import { useEffect } from 'react';
 // Imported Icons
-import {RxCalendar} from 'react-icons/rx'
-import {BsShieldCheck,BsBookmarkCheck} from 'react-icons/bs'
+import { RxCalendar } from 'react-icons/rx'
+import { BsShieldCheck, BsBookmarkCheck } from 'react-icons/bs'
 // Imported Aos
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 const Info = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 })
-  }, [])
-  return (
-   <div className="info section">
+  const InfoJsx: JSX.Element = (<div className="info section">
     <div className="infoContainer container">
 
       <div className="titileDiv flex">
@@ -22,7 +18,7 @@ const Info = () => {
       <div data-aos="fade-up" data-aos-duration='2500' className="cardsDiv grid">
         <div className="singleCard grid">
           <div className="iconDiv flex ">
-            <RxCalendar className='icon'/>
+            <RxCalendar className='icon' />
           </div>
           <span className="cardTitle">Book & Relax</span>
           <p>you can also call airlines from your phone and book a flight ticket!</p>
@@ -30,7 +26,7 @@ const Info = () => {
 
         <div className="singleCard grid ">
           <div className="iconDiv flex colorOne">
-            <BsShieldCheck className='icon'/>
+            <BsShieldCheck className='icon' />
           </div>
           <span className="cardTitle">Book & Relax</span>
           <p>you can also call airlines from your phone and book a flight ticket!</p>
@@ -38,7 +34,7 @@ const Info = () => {
 
         <div className="singleCard grid ">
           <div className="iconDiv flex colorTwo">
-            <BsBookmarkCheck className='icon'/>
+            <BsBookmarkCheck className='icon' />
           </div>
           <span className="cardTitle">Book & Relax</span>
           <p>you can also call airlines from your phone and book a flight ticket!</p>
@@ -46,7 +42,12 @@ const Info = () => {
       </div>
 
     </div>
-   </div>
+  </div>)
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+  return (
+    <>{InfoJsx}</>
   )
 }
 

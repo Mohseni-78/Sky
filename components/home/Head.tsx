@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 import Image from "next/image"
 //Imported Assests ===========>
 import takeoff from '@/public/images/takeOff.png'
-// import sky from "@/public/images/sky.mp4"
 // Imported Aos
 import Aos from "aos"
 import 'aos/dist/aos.css'
@@ -18,7 +17,7 @@ const Head = () => {
       </div>
       <div data-aos="fade-down" data-aos-duration='2500' className="homeImages flex">
         <div className="videoDiv">
-          <Image src={takeoff} className="video" alt=''/>
+          <video src='@/public/images/sky.mp4' className="video" autoPlay loop ></video>
         </div>
         <Image src={takeoff} alt="" className="plain" />
       </div>

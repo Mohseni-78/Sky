@@ -620,6 +620,92 @@
     }
 }
 
+// Signup Section Styling =================>
+.signup {
+    overflow: hidden;
+    .bg {
+        background-size: cover;
+        background-clip: border-box;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        filter: blur(8px) brightness(90%);
+    }
+
+    .signupSection {
+        padding: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        top: 7rem;
+        left: 5rem;
+        position: absolute;
+        z-index: 999;
+        width: 50%;
+    }
+
+    .title {
+        color: #fff200;
+    }
+
+    .form {
+.p{
+    color: white;
+    margin-left: 10px;
+    font-size: small;
+}
+        .form-group {
+            margin-top: 1.8rem;
+            margin-left: 10px;
+
+            label {
+                margin-left: 5px;
+                color: var(--BlackColor);
+                font-size: small;
+                font-weight: 600;
+            }
+
+            .inputBox {
+                position: relative;
+            }
+
+            input {
+                padding: 10px 1.7rem;
+                border: none;
+                outline: none;
+                background-color: var(--WhiteColor);
+                border-radius: 12px;
+                width: 100%;
+                margin: 10px 0;
+                color: var(--BlackColor);
+                display: block;
+
+
+                &::placeholder {
+                    color: var(--BlackColor);
+                    font-size: 12px;
+                }
+            }
+            span{
+                margin-left: 7px;
+                font-size: smaller;
+                color: rgb(128, 13, 13);
+            }
+            
+            .icon {
+                position: absolute;
+                right: 5px;
+                font-size: 20px;
+                bottom: 36px;
+            }
+        }
+
+        .btn {
+            margin-top: 1.5rem;
+            margin-left: 10px;
+
+        }
+    }
+}
+
 // Media Screen Styling==============>
 @media screen and (min-width:480px) {
     .home {

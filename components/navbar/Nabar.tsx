@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 // Imported Icons ============>
 import { SiConsul } from "react-icons/si";
 import { SiLinear } from "react-icons/si";
@@ -37,7 +38,7 @@ const Navbar = () => {
         </li>
       </div>
       <div className="atb flex">
-        <span>Sign In</span>
+        <Link href="/signin"><span>Sign In</span></Link>
         <span>Sign Out</span>
       </div>
     </div>

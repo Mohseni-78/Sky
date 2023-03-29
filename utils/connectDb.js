@@ -1,11 +1,8 @@
-import mongoose from "mongoose";
-const mongoUrl =
-  "mongodb+srv://Alireza:7lrhTFAqgOx6L7U0@cluster0.wfxxiu7.mongodb.net/?retryWrites=true&w=majority";
-
+import {connections,connect} from "mongoose";
 export default async function connectDb() {
   try {
-    if (!mongoose.connections[0].readyState) {
-     await mongoose.connect(mongoUrl);
+    if (!connections[0].readyState) {
+     await connect(process.env.NEXT_PUBLIC_MONGO_KEY || '');
       console.log("connect to db");
     }
   } catch (err) {

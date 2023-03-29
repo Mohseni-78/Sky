@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 // Imported DB ===============>
 import connectDb from "@/utils/connectDb";
 // Imported Models ===============>
-import User from "@/models/User";
+import UserFly from "@/models/UserFly";
 // Imported Helper functions ===============>
 import { verifyPassword } from "@/helper/functions";
 
@@ -21,7 +21,7 @@ export default nextAuth({
         if (!email || !password) {
           throw new Error("Invalid Data");
         }
-        const user = await User.findOne({ email });
+        const user = await UserFly.findOne({ email });
         if (!user) {
           throw new Error("Email Dosnt Exist");
         }

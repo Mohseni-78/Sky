@@ -1,6 +1,6 @@
 import { getSession } from 'next-auth/react'
 // Imported Models ===============>
-import User from "@/models/User";
+import UserFly from "@/models/UserFly";
 // Imported Components ============>
 import Navbar from '@/components/navbar/Navbar'
 import Head from "@/components/home/Head"
@@ -11,7 +11,8 @@ import Lounge from '@/components/lounge/Lounge'
 import Travel from '@/components/travel/Travel'
 import Subscribers from '@/components/subscribers/Subscribers'
 import Footer from '@/components/footer/Footer'
-export default function Home({ user }: any) {
+import { GetServerSideProps } from 'next';
+function Home({ user }: any) {
   return (
     <>
       <Navbar user={user} />
@@ -26,12 +27,11 @@ export default function Home({ user }: any) {
     </>
   )
 }
-export async function getServerSideProps({ req }: any) {
+export default Home
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const session = await getSession({ req });
-  const user =await User.findOne({ email: session?.user?.email })
-
-
+  const user = await UserFly.findOne({ email: session?.user?.email })
   return {
-    props: { user: user?.name || "" }
+    props: JSON.parse(JSON.stringify({user:user?.email})) 
   }
 }

@@ -48,6 +48,7 @@ const SignupCom = () => {
         })
         .then(res => res.json())
         .then(data => {
+          console.log(data);
           if (data.status === "success") {
             window.location.href = "/"
           } else {

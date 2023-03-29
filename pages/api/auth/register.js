@@ -1,9 +1,9 @@
 // Imported DB ===============>
 import connectDb from "@/utils/connectDb";
 // Imported Models ===============>
-import User from "@/models/User";
+import UserFly from "@/models/UserFly";
 // Imported Helper functions ===============>
-import { hashPassword } from "../../../helper/functions";
+import { hashPassword } from "@/helper/functions";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   if (!email || !password) {
     return res.status(401).json({ status: "failed", message: "Invalid Data" });
   }
-  const existUser = await User.findOne({ email });
+  const existUser = await UserFly.findOne({ email });
   if (existUser) {
     return res
       .status(401)
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
   }
   const hasshedPassword =await hashPassword(password);
   try {
-    const registerUser = await User.create({
+    const registerUser = await UserFly.create({
       name,
       lastName,
       email,

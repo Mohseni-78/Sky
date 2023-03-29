@@ -40,14 +40,14 @@ const Navbar = ({ user }: any) => {
       </div>
       <div className="atb flex">
         {
-          user ? <>
+          user? (<>
             <span className="btn" style={{ color: "white" }}>{user}</span>
             <span className="btn" style={{ color: "white", background: "red" }} onClick={(e) => {
               e.preventDefault();
               signOut();
             }}>Sign Out</span>
-          </> :
-            <Link href="/signin"><span className="btn" style={{color: "white", background: "green"}}>Sign In</span></Link>
+          </>) :
+            <Link href="/signin"><span className="btn" style={{ color: "white", background: "green" }}>Sign In</span></Link>
 
         }
 

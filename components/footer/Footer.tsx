@@ -8,7 +8,6 @@ import { AiOutlineTwitter, AiFillYoutube } from "react-icons/ai";
 // Imported Aos
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { JsxElement } from 'typescript';
 
 const Footer = () => {
   const FooterJsx: JSX.Element = (<div className="footer">
@@ -93,7 +92,7 @@ const Footer = () => {
     </div>
     <div className="copyRightDiv flex">
       <p>
-        Courtesy Design | Developed by <a href="">IsraTech</a>
+        Iranian Design | Developed by <a href="mailto:mohseni.arz@gmail.com">Alireza Mohseni</a>
       </p>
     </div>
   </div>)

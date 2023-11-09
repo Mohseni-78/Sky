@@ -15,7 +15,7 @@ import { GetServerSideProps } from 'next';
 function Home({ user }: any) {
   return (
     <>
-      <Navbar user={user} />
+      <Navbar />
       <Head />
       <Search />
       <Support />
@@ -28,10 +28,10 @@ function Home({ user }: any) {
   )
 }
 export default Home
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const session = await getSession({ req });
-  const user = await UserFly.findOne({ email: session?.user?.email })
-  return {
-    props: JSON.parse(JSON.stringify({user:user?.email})) 
-  }
-}
+// export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+//   const session = await getSession({ req });
+//   const user = await UserFly.findOne({ email: session?.user?.email })
+//   return {
+//     props: JSON.parse(JSON.stringify({user:user?.email})) 
+//   }
+// }
